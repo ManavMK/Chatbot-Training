@@ -1,0 +1,102 @@
+from nltk.chat.util import Chat,reflections
+
+
+
+pairs = [
+    [
+        r"my name is (.*)",
+        ["Hello %1, How are you today ?",]
+    ],
+    [
+        r"hi|hey|hello",
+        ["Hello", "Hey there",]
+    ],
+    [
+        r"Good Morning",
+        ["Good Morning how are you doing", "Good Morning how was your day",]
+    ],
+    [
+        r"what is your name ?",
+        ["I am a bot created by CSE. you can call me crazy!",]
+    ],
+    [
+        r"how are you ?",
+        ["I'm doing good. How about You ?",]
+    ],
+    [
+        r"what is your name ?",
+        ["I am a bot created by CSE. you can call me crazy!",]
+    ],
+    
+    [
+        r"(.*)raining in (.*)",
+        ["No rain since last week here in %2","Damn its raining too much here in %2"]
+    ],
+    [
+        r"I am fine",
+        ["Great to hear that, How can I help you?",]
+    ],
+    [
+        r"i'm (.*) doing good",
+        ["Nice to hear that","How can I help you?:)",]
+    ],
+    [
+        r"(.*) age?",
+        ["I'm a computer program dudenSeriously you are asking me this?",]
+    ],
+    [
+        r"what (.*) want ?",
+        ["Make me an offer I can't refuse",]
+    ],
+    [
+        r"(.*) created ?",
+        ["Manav created me using Python's NLTK library ","top secret ;)",]
+    ],
+    [
+        r"(.*) (location|city) ?",
+        ['Indore, Madhya Pradesh',]
+    ],
+    [
+        r"how is weather in (.*)?"
+        r"",
+        ["Weather in %1 is awesome like always","Too hot man here in %1","Too cold man here in %1","Never even heard about %1"]
+    ],
+    [
+        r"sorry (.*)",
+        ["Its alright happens","Its OK, never mind",]
+    ],
+    [
+        r"i work in (.*)?",
+        ["%1 is an Awsome company, I have heard about it.",]
+    ],
+    
+    [
+        r"how (.*) health(.*)",
+        ["404 Error, HAHA! Just Kidding",]
+    ],
+    [
+        r"(.*) (sports|game) ?",
+        ["I'm a very big fan of Anime",]
+    ],
+    [
+        r"who (.*) sportsperson ?",
+        ["Kapil","Dhoni","Sachin"]
+    ],
+    [
+        r"who (.*) (moviestar|actor)?",
+        ["No one specific to be frank"]
+    ],
+    
+    [
+        r"quit",
+        ["BBye take care. See you again :) ","It was nice talking to you. See you again :)"]
+    ],
+]
+
+def chat():
+
+    chat = Chat(pairs, reflections)
+    chat.converse()
+#initiate the conversation
+if __name__ == "__main__":
+    chat()
